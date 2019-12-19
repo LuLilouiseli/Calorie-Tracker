@@ -1,0 +1,8 @@
+install oracle db: npm install oracledb
+安装oracle client libraray:https://oracle.github.io/odpi/doc/installation.html#windows
+安装之后解压
+添加环境变量
+query: 用``, 不能用引号，不能加分号
+
+//怎么获取现在的用户id？--username as key & foreign key
+

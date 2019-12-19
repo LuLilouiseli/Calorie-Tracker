@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularjsNodejsTutorial">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calorie Tracker</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="javascripts/app.js" type="text/javascript"></script>
+    <!-- Custom styles for this template-->
+    <link href="/stylesheets/common.css" rel="stylesheet">
+    <link href="/stylesheets/exerciseSearch.css" rel="stylesheet">
+</head>
+
+<body ng-controller="proteinSearchController">
+<nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand center"><a href='/'>Calorie Tracker</a></span>
+        <a class="nav-item nav-link" href="/profile">Profile+</a>
+           <a class="nav-item nav-link" href="/exerciseSearch">Exercise Search</a>
+           <a class="nav-item nav-link" href="/foodSearch">Food Search</a>
+       <a class="nav-item nav-link" href="/caloriesSearch">Calories Search</a>
+       <a class="nav-item nav-link" href="/proteinSearch">Protein Search</a>
+       <a class="nav-item nav-link" href="/logout">Log out</a>
+   </nav>
+<!-- Sample Content. You can either use this or make your own -->
+<div class="container nutrition-container">
+    <div class="jumbotron">
+        <div class="h5">Protein Search</div>
+        <br>
+        <div class="input-container">
+            <div class="h6">Please enter a protein amount</div>
+            <input type="text" ng-model="proteinAmount" placeholder="e.g:13" id="proteinAmount" class="nutrition-input"/>
+            <button class="btn btn-primary btn-sm" ng-click="submitProtein()">Submit</button>
+        </div>
+        <!--<div class="jumbotron">-->
+            <p></p>
+            <div class="food-container">
+                <div class="food" id="results" ng-if="proteinResults">
+                    <div class="header"><em><strong>You may want to try these food for protein:</strong></em></div>
+                    <p>
+
+                    </p>
+                    <ul>
+                        <li class="food" id="results" ng-repeat="p in proteinResults">{{p[0]}}</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<!-- Include these before the end of body tag in every HTML file -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

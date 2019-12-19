@@ -1,0 +1,67 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('https://images.pexels.com/photos/1764702/pexels-photo-1764702.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500') center center no-repeat fixed;
+  height: 100vh;
+  width: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.nav-container {
+  margin: 20px auto;
+}
+
+.jumbotron {	
+
+  margin-top:70px;
+
+  background-color: #363d45;
+
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("https://upload.wikimedia.org/wikipedia/commons/3/38/Tampa_FL_Sulphur_Springs_Tower_tall_pano01.jpg");*/
+  padding: 2rem;
+  opacity: 98%;
+
+}
+
+.back-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  margin: 10px 0;
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 14px;
+  padding: 2px 16px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+  background: #bd54a4;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-btn:hover {
+  background: #c561ae;
+}
+
+.back-btn:active {
+  background: #d86bbe;
+}
+
+.nav-item{
+  color:white;
+}
+
+h1{
+  text-align: center;
+}
+
+div{
+  color:white;
+}

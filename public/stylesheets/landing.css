@@ -1,0 +1,79 @@
+body {
+    background-color: #000;
+  }
+
+  #landing-header {
+    z-index: 1;/* front and back*/
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+  #landing-header h1 {
+    color: #fff;
+  }
+
+  .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+  }
+
+  .slideshow li:nth-child(1) { 
+    background-image: url(http://likea.ezvivi.com/manage/0/product/299483/299483_0.jpeg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://www.cosmopolitan.com.hk/var/cosmopolitanhk/storage/nodejs/files/2017/04/18/15b7fb34-14f0-4e49-96af-2ec9f803b169.15b7fb34-14f3-45bd-a38f-d19873d4d29f.jpeg);
+    animation-delay: 7s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://pic3.zhimg.com/v2-10887723c83b8fbff77f11f5c9cd389a_b.jpg);
+    animation-delay: 14s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://d2z0k43lzfi12d.cloudfront.net/blog/vcdn293/wp-content/uploads/2017/06/improve-running-stamina-endurance-thumbnail_blog_1200x800-1-1024x683.jpg);
+ 
+    animation-delay: 21s; 
+  }
+
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+
+  /* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularjsNodejsTutorial">
+
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>History Record</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="javascripts/app.js" type="text/javascript"></script>
+    <!-- Custom styles for this template-->
+    <link href="/stylesheets/common.css" rel="stylesheet">
+    <link href="/stylesheets/history.css" rel="stylesheet">
+    <!-- Include your custom css file here if you're making one -->
+  </head> 
+
+  <body ng-controller="historyController">
+    	<nav class="navbar navbar-dark bg-dark">
+          <span class="navbar-brand center"><a href='/'>Calorie Tracker</a></span>
+          <a class="nav-item nav-link" href="/profile">Profile+</a>
+           <a class="nav-item nav-link" href="/exerciseSearch">Exercise Search</a>
+           <a class="nav-item nav-link" href="/foodSearch">Food Search</a>
+           <a class="nav-item nav-link" href="/caloriesSearch">Calories Search</a>
+           <a class="nav-item nav-link" href="/proteinSearch">Protein Search</a>
+           <a class="nav-item nav-link" href="/logout">Log out</a>
+   </nav>
+
+
+
+    <!-- Sample Content. You can either use this or make your own -->
+    <div class="container history-container">
+      <div class="jumbotron">
+        <div class="h5">History Records</div>
+        <br>
+        <div class="date-container">
+          <label for="start">Start date:</label>
+          <input type="date" id="selectedDate" name="start" ng-model="selectedDate" data-date="" data-date-format="DD MMMM YYYY">
+        </div>
+        <div class="date-container">
+          <label for="end">End date:</label>
+          <input type="date" id="selectedDate2" name="end" ng-model="selectedDate2" data-date="" data-date-format="DD MMMM YYYY">                           
+          <button class="submit-btn btn btn-primary btn-sm" id="dateSubmitBtn" ng-click="submitDate()">Submit</button>
+        </div>
+      </div>
+      <div class="jumbotron">
+          <div class="h5">Diet Records</div>
+          <!-----------GIRD--------------->
+          
+          <div class="container records" > 
+            <div class="records">
+              <div class = "row">
+                <div class = "col">
+                    <strong><em>Date</em></strong>
+                </div>
+                <div class = "col">
+                    <strong><em>Food</em></strong>
+                </div>
+                <div class = "col">
+                    <strong><em>Amount(g)</em></strong>
+                </div>
+              </div>
+
+            </div> 
+            <div class="records" id="results" ng-repeat="record in records">
+            <div class = "row">
+               
+              <div class = "col">
+                  <div class="record_date">{{record[0]}}</div>
+              </div>
+              <div class = "col">
+                  <div class="calories">{{record[1]}}</div>
+              </div>
+              <div class = "col">
+                  <div class="protein">{{record[2]}}</div>
+              </div>
+            </div> 
+          </div>  
+       
+          </div>
+         
+        </div>
+  
+        <div class="jumbotron">
+            <div class="h5">Exercise Records</div>
+          <div class="container records1">
+            <div class="records1">
+              <div class = "row">
+                <div class = "col"><strong><em>Date</em></strong></div>
+                <div class = "col"><strong><em>Exercise</em></strong></div>
+                <div class = "col"><strong><em>Time(min)</em></strong></div>
+              </div>
+            <!--
+              <div class="header"><strong>Date</strong></div>
+              <div class="header"><strong>Exercise</strong></div>
+              <div class="header"><strong>Time</strong></div>
+              -->
+            </div>          
+            <div class="records" id="results1" ng-repeat="record in records1">
+              <div class = "row">
+                <div class = "col">{{record[0]}}</div>
+                <div class = "col">{{record[1]}}</div>
+                <div class = "col">{{record[2]}}</div>
+              </div>
+              <!--
+              <div class="record_date">{{record[0]}}</div>
+              <div class="calories">{{record[1]}}</div>
+              <div class="protein">{{record[2]}}</div>-->
+            </div>          
+          </div>
+          <a href = "/track"><button class = "btn btn-primary btn-sm">Add some new Records</button></a>
+        </div>
+        
+    </div>
+
+    <!-- Include these before the end of body tag in every HTML file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+
+</html>

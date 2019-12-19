@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="angularjsNodejsTutorial">
+
+<head>
+    <meta charset="UTF-8">
+	<title>user profile</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/profile.css"></link>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+	<script src="javascripts/app.js" type="text/javascript"></script>
+	<!--<link href="/stylesheets/common.css" rel="stylesheet">-->
+
+<body ng-controller="profileController">
+	<!--Navbar-->
+	<nav class="navbar navbar-dark bg-dark">
+	   <span class="navbar-brand center"><a href='/'>Calorie Tracker</a></span>
+        <a class="nav-item nav-link" href="/exerciseSearch">Exercise Search</a>
+        <a class="nav-item nav-link" href="/foodSearch">Food Search</a>
+		<a class="nav-item nav-link" href="/caloriesSearch">Calories Search</a>
+		<a class="nav-item nav-link" href="/proteinSearch">Protein Search</a>
+		<a class="nav-item nav-link" href="/logout">Log out</a>
+</nav>
+<!--TOP PICTURE-->
+<div class="topBackground">
+	</div>
+	<div class = "profile_container"><h1>{{user_name}}</h1></div>
+	<table class="table text-center" >
+			<tbody>
+			  <tr>
+				<td><strong>Age:</strong> {{age}}</td>
+				<td><strong>Gender:</strong> {{gender}}</td>
+			  </tr>
+			  <tr>
+				<td><strong>Height:</strong> {{height}} cm</td>
+				<td><strong>Weight:</strong> {{weight}} kg</td>
+
+			  </tr>
+			  <tr>
+				<td><strong>BMR:</strong> {{bmr}} </td>
+				<td><strong>Aim:</strong> {{aim}} </td>
+			  </tr>
+
+			  <tr>
+					<td><strong>Favorite Food:</strong> {{fav_fd}}</td>
+					<td><strong>Favorite Exercise:</strong> {{fav_ex}}</td>
+			</tr>
+			</tbody>
+		  </table>
+		  <div class = "profile_container">
+		  <a href="/rec"><button class = "btn btn-outline-secondary btn-lg">Recommend an exercise!</button></a>
+		  <a href="/edit"><button class = "btn btn-outline-secondary btn-lg">Update my profile</button></a>
+		  <a href="/history"><button class = "btn btn-outline-secondary btn-lg">View my history records</button></a>
+		  <a href="/track"><button class = "btn btn-outline-secondary btn-lg">track</button></a>
+		</div>
+
+		
+		
+		<!--
+
+		<div class = "card-body">
+				<a href="/rec"><button class = "btn btn-primary btn-lg">Recommend an exercise!</button></a>
+				<a href="/edit"><button class = "btn btn-primary btn-lg">Update my profile</button></a>
+				<a href="/history"><button class = "btn btn-primary btn-lg">View my history records</button></a>
+				<a href="/track"><button class = "btn btn-primary btn-lg">track</button></a>
+		</div>
+
+-->
+		</div>
+
+	</div>
+
+
+	</div>
+	<!-- Include these before the end of body tag in every HTML file -->
+</body>
+
+</html>
